@@ -36,5 +36,5 @@ if [ "$HADOLINT_RECURSIVE" = "true" ]; then
   hadolint $HADOLINT_IGNORE_CMDLINE $HADOLINT_CONFIG $flags **/$filename
 else
   # shellcheck disable=SC2086
-  hadolint $HADOLINT_IGNORE_CMDLINE $HADOLINT_CONFIG "$@"
+  hadolint --no-color $HADOLINT_IGNORE_CMDLINE $HADOLINT_CONFIG "$@"
 fi
